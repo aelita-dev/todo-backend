@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+  db: 
+    image: postgres:13.3
+    env_file: ".env" 
+    ports:
+      - "4001:5432"
+    volumes:
+      - todo-data:/var/lib/postgresql/data
+
+
+volumes:
+  todo-data:
